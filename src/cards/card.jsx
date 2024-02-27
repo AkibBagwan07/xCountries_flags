@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import styles from "./card.module.css";
 
-let Api = "https://restcountries.com/v3.1/all";
+import Api from "../api"
 
 export default function Card() {
   let [countries, setCountries] = useState([]);
@@ -12,7 +12,7 @@ export default function Card() {
         let data = await axios.get(Api);
         setCountries(data.data);
         console.log(data.data);
-        return data;
+       // return data;
       }
       getdata();
     } catch (error) {
