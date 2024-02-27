@@ -9,11 +9,9 @@ export default function Card() {
   useEffect(() => {
     try {
       async function getdata() {
-        let res = await fetch(Api)
-        let data = await res.json()
-        // setCountries(data.data);
-        // console.log(data.data);
-        setCountries(data)
+        let data = await axios.get(Api);
+        setCountries(data.data);
+        console.log(data.data);
        // return data;
       }
       getdata();
@@ -29,7 +27,7 @@ export default function Card() {
           <img
             className={styles.flag}
             src={country.flags.png}
-            alt="country-flag"
+            alt={country.name.common}
           />
           <h5 className={styles.name}>{country.name.common}</h5>
         </div>
