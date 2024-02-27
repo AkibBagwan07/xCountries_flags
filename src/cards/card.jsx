@@ -9,14 +9,15 @@ export default function Card() {
   useEffect(() => {
     try {
       async function getdata() {
-        let data = await axios.get(Api);
-        setCountries(data.data);
-        console.log(data.data);
+        let res = await fetch(Api).then((data)=> data.json()).catch((err)=>console.log(err))
+        // setCountries(data.data);
+        // console.log(data.data);
+        setCountries(res)
        // return data;
       }
       getdata();
     } catch (error) {
-      console.error("Error getting data" , error);
+      // console.error("Error getting data" , error);
       console.log(error)
     }
   }, []);
