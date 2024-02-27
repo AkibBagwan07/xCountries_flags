@@ -29,7 +29,7 @@ export default function Card() {
           <img
             className={styles.flag}
             src={country.flags.png}
-            alt={country.name.common}
+            alt="country-flag"
           />
           <h5 className={styles.name}>{country.name.common}</h5>
         </div>
