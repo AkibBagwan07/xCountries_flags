@@ -9,10 +9,11 @@ export default function Card() {
   useEffect(() => {
     try {
       async function getdata() {
-        let res = await fetch(Api).then((data)=> data.json()).catch((err)=>console.log(err))
+        let res = await fetch(Api)
+        let data = await res.json()
         // setCountries(data.data);
         // console.log(data.data);
-        setCountries(res)
+        setCountries(data)
        // return data;
       }
       getdata();
