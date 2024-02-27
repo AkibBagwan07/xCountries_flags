@@ -1,0 +1,31 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  .card {
+    border: 1px solid black;
+    height: 130px;
+    width: 100px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .flag {
+    height: 60px;
+    width: 100px;
+  }
+  
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 25px;
+  }
+  
