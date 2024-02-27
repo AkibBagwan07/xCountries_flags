@@ -11,8 +11,8 @@ export default function Card() {
       async function getdata() {
         let data = await axios.get(Api);
         setCountries(data.data);
-        console.log(data.data);
-        return data;
+        // console.log(data.data);
+        // return data;
       }
       getdata();
     } catch (error) {
