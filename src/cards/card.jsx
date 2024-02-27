@@ -16,7 +16,8 @@ export default function Card() {
       }
       getdata();
     } catch (error) {
-      console.log(error);
+      console.error("Error getting data" , error);
+      console.log(error)
     }
   }, []);
   return (
