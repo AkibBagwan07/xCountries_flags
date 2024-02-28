@@ -7,7 +7,7 @@ import Api from "../api"
 export default function Card() {
   let [countries, setCountries] = useState([]);
   useEffect(() => {
-    async function getdata() {
+    (async function() {
     try {
         let data = await axios.get(Api);
         setCountries(data.data);
@@ -15,10 +15,10 @@ export default function Card() {
        // return data;
       }catch (error) {
       // console.error("Error getting data" , error);
-      console.log(error)
+      console.log("Error getting data",error)
     }
-  }
-    getdata();
+  })
+    ();
   }, []);
   return (
     <div className={styles.parent}>
