@@ -13,9 +13,9 @@ export default function Card() {
         setCountries(data.data);
         console.log(data.data);
        // return data;
-      }
-     catch (error) {
-      console.log("Error getting data" ,error)
+      }catch (error) {
+      // console.error("Error getting data" , error);
+      console.log(error)
     }
   }
     getdata();
